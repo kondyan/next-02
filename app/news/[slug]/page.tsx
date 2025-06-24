@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { DUMMY_NEWS } from "@/dummy-news";
+import { notFound } from "next/navigation";
 
 export default async function NewsDynamicPage({
   params,
@@ -10,7 +11,7 @@ export default async function NewsDynamicPage({
   const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === slug);
 
   if (!newsItem) {
-    return <h1>Item was not Found, try again</h1>;
+    notFound();
   }
 
   return (

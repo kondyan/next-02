@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.jpg";
+import logo from "../../assets/logo.jpg";
 import Link from "next/link";
 
 export default function HomePage() {
